@@ -89,7 +89,7 @@ class _DemoScreenState extends State<DemoScreen> {
                       const Text('App Bar'),
                       const Divider(),
                       const AppBarWidget(
-                        title: 'Title',
+                        title: 'Multiplatform App',
                       ),
                       const SpacerWidget.x4(),
                       const Text('Card'),
@@ -108,17 +108,27 @@ class _DemoScreenState extends State<DemoScreen> {
                       ),
                     ],
                   ),
-                PreviewsConst.templates => const Column(
+                PreviewsConst.templates => Column(
                     children: [
-                      SpacerWidget.x4(),
-                      Text('Screen'),
-                      Divider(),
-                      Text(
-                        'This demo screen is a sample of that use',
-                        style: TextStyle(
-                          fontStyle: FontStyle.italic,
+                      const SpacerWidget.x4(),
+                      const Text('Screen'),
+                      const Divider(),
+                      SizedBox(
+                        height: 500,
+                        child: ScreenWidget(
+                          title: 'Multiplanet App',
+                          primaryActionButton: FloatingActionButton(
+                            onPressed: () {
+                              showSnackBar(context, 'Hello, 🪐!');
+                            },
+                            child: const Icon(Icons.satellite_alt_rounded),
+                          ),
+                          child: const Center(
+                            child: Text('Hello, 🌎!'),
+                          ),
                         ),
                       ),
+                      const Divider(),
                     ],
                   ),
                 _ => const Text('No preview selected'),
