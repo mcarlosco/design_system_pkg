@@ -26,3 +26,5 @@ Design system based on [Material 3](https://m3.material.io/).
 ### Templates
 
 - Screen
+
+For more, please see this [example](https://github.com/mcarlosco/design_system_pkg/tree/main/example).
