@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../organisms.dart';
 
+/// Implements the basic Material Design visual layout structure.
 final class ScreenWidget extends StatelessWidget {
   final String title;
   final Widget child;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// A Material Design app bar.
 final class AppBarWidget extends StatelessWidget
     implements PreferredSizeWidget {
   final String title;

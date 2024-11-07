@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// A box with a specified height factor.
 final class SpacerWidget extends StatelessWidget {
   final int _factor;
 

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../atoms.dart';
 import '../molecules.dart';
 
+/// A Material Design card: a panel with slightly rounded corners and an
+/// elevation shadow.
 final class CardWidget extends StatelessWidget {
   final String? headline;
   final String? subhead;
@@ -12,6 +14,7 @@ final class CardWidget extends StatelessWidget {
   final VoidCallback? onButtonPressed;
   final bool headlineBolded;
 
+  /// Create an outlined variant of Card.
   const CardWidget.outlined({
     super.key,
     this.headline,
