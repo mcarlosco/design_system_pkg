@@ -6,7 +6,7 @@ Mobile app developed with [Flutter](https://flutter.dev/).
 
 ## Previews
 
-Just a sample of what you can use.
+A sample of what you can use.
 
 ### Atoms
 
