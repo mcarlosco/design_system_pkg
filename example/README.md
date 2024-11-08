@@ -23,3 +23,7 @@ A sample of what you can use.
 ### Templates
 
 <img src="https://github.com/user-attachments/assets/9203806a-c1e9-4117-abe6-d6ba25050dc1" alt="Templates preview" width="250">
+
+### Pages
+
+<img src="https://github.com/user-attachments/assets/23122194-b184-4f55-ba5f-d4ca468c8d35" alt="Pages preview" width="250">
