@@ -18,7 +18,7 @@ final class AppWidget extends StatelessWidget {
         textTheme: GoogleFonts.lexendTextTheme(),
       ),
       routes: {
-        '/page': (_) => const Page(),
+        '/dash_lovers': (_) => const DashLoversScreen(),
       },
       home: const DemoScreen(),
     );

@@ -1,2 +1,2 @@
 export 'screens/demo_screen.dart';
-export 'screens/page.dart';
+export 'screens/dash_lovers_screen.dart';

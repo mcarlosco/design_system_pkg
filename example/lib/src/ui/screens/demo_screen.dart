@@ -142,7 +142,8 @@ class _DemoScreenState extends State<DemoScreen> {
                     icon: const Icon(Icons.arrow_forward_rounded),
                     text: 'Go to a page you will love',
                     onPressed: () {
-                      unawaited(Navigator.of(context).pushNamed<void>('/page'));
+                      unawaited(Navigator.of(context)
+                          .pushNamed<void>('/dash_lovers'));
                     },
                   ),
                 _ => const Text('No preview selected'),

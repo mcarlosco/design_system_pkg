@@ -1,14 +1,14 @@
 import 'package:design_system_pkg/design_system_pkg.dart';
 import 'package:flutter/material.dart';
 
-class Page extends StatefulWidget {
-  const Page({super.key});
+class DashLoversScreen extends StatefulWidget {
+  const DashLoversScreen({super.key});
 
   @override
-  State<Page> createState() => _PageState();
+  State<DashLoversScreen> createState() => _DashLoversScreenState();
 }
 
-class _PageState extends State<Page> {
+class _DashLoversScreenState extends State<DashLoversScreen> {
   late int _total;
 
   @override
