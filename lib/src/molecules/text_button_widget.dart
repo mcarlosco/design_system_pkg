@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 /// A Material Design "Text Button" with a text.
 class TextButtonWidget extends StatelessWidget {
   final VoidCallback? onPressed;
+  final Icon? icon;
   final String text;
 
   final Color? _textColor;
@@ -11,6 +12,7 @@ class TextButtonWidget extends StatelessWidget {
   const TextButtonWidget.dangerous({
     super.key,
     this.onPressed,
+    this.icon,
     required this.text,
   }) : _textColor = Colors.red;
 
@@ -18,14 +20,16 @@ class TextButtonWidget extends StatelessWidget {
   const TextButtonWidget.safe({
     super.key,
     this.onPressed,
+    this.icon,
     required this.text,
   }) : _textColor = null;
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
+    return TextButton.icon(
       onPressed: onPressed,
-      child: Text(
+      icon: icon,
+      label: Text(
         text,
         style: TextStyle(
           color: _textColor,
