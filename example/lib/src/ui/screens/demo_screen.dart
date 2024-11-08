@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:design_system_pkg/design_system_pkg.dart';
 import 'package:flutter/material.dart';
 
@@ -74,10 +76,15 @@ class _DemoScreenState extends State<DemoScreen> {
                       const Text('Text Button'),
                       const Divider(),
                       TextButtonWidget.dangerous(
+                        icon: const Icon(
+                          Icons.dangerous_rounded,
+                          color: Colors.red,
+                        ),
                         text: 'Dangerous action',
                         onPressed: () {},
                       ),
                       TextButtonWidget.safe(
+                        icon: const Icon(Icons.safety_check_rounded),
                         text: 'Safe action',
                         onPressed: () {},
                       ),
@@ -130,6 +137,13 @@ class _DemoScreenState extends State<DemoScreen> {
                       ),
                       const Divider(),
                     ],
+                  ),
+                PreviewsConst.pages => TextButtonWidget.safe(
+                    icon: const Icon(Icons.arrow_forward_rounded),
+                    text: 'Go to a page you will love',
+                    onPressed: () {
+                      unawaited(Navigator.of(context).pushNamed<void>('/page'));
+                    },
                   ),
                 _ => const Text('No preview selected'),
               }

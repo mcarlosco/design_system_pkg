@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Page;
 import 'package:google_fonts/google_fonts.dart';
 
 import '../screens.dart';
@@ -17,6 +17,9 @@ final class AppWidget extends StatelessWidget {
         useMaterial3: true,
         textTheme: GoogleFonts.lexendTextTheme(),
       ),
+      routes: {
+        '/page': (_) => const Page(),
+      },
       home: const DemoScreen(),
     );
   }
