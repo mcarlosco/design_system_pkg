@@ -8,3 +8,5 @@ export 'src/templates.dart';
 
 export 'src/utils/feedback_util.dart';
 export 'src/utils/validators_util.dart';
+
+export 'src/shopping.dart';
