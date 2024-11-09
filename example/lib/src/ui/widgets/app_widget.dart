@@ -1,3 +1,4 @@
+import 'package:design_system_pkg/design_system_pkg.dart';
 import 'package:flutter/material.dart' hide Page;
 import 'package:google_fonts/google_fonts.dart';
 
@@ -18,7 +19,11 @@ final class AppWidget extends StatelessWidget {
         textTheme: GoogleFonts.lexendTextTheme(),
       ),
       routes: {
-        '/dash_lovers': (_) => const DashLoversScreen(),
+        '/dash_lovers': (context) => ShoppingPage(
+              title: 'Dash Lovers',
+              products: ModalRoute.of(context)!.settings.arguments
+                  as List<ProductModel>,
+            ),
       },
       home: const DemoScreen(),
     );

@@ -142,8 +142,47 @@ class _DemoScreenState extends State<DemoScreen> {
                     icon: const Icon(Icons.arrow_forward_rounded),
                     text: 'Go to a page you will love',
                     onPressed: () {
-                      unawaited(Navigator.of(context)
-                          .pushNamed<void>('/dash_lovers'));
+                      unawaited(
+                        Navigator.of(context).pushNamed(
+                          '/dash_lovers',
+                          arguments: const [
+                            ProductModel(
+                              title: 'Dash 1.0',
+                              price: 19,
+                              description:
+                                  'The people have spoken, so Dash is now the mascot for Flutter and Dart.',
+                              image:
+                                  'https://docs.flutter.dev/assets/images/dash/dash-1.0.jpg',
+                            ),
+                            ProductModel(
+                              title: 'Dash 2.0 and 2.1',
+                              price: 33,
+                              description:
+                                  'Since the creation of Dash 1.0, we\'ve made two more versions. '
+                                  'Marketing slightly changed the Dart and Flutter color scheme after Dash 1.0 was created, '
+                                  'so Dash 2.0 reflects the updated scheme (which removed the green color). '
+                                  'Dash 2.1 is a smaller size and has a few more color tweaks. '
+                                  'The smaller size is easier to ship, and fits better in a claw machine!',
+                              image:
+                                  'https://docs.flutter.dev/assets/images/dash/BigDashAndLittleDash.png',
+                            ),
+                            ProductModel(
+                              title: 'Mega-Dash',
+                              price: 99,
+                              description:
+                                  'Mega-Dash made her first appearance at the Flutter Interact event in Brooklyn, New York, '
+                                  'on December 11, 2019.',
+                              image:
+                                  'https://docs.flutter.dev/assets/images/dash/MegaDashChilling.png',
+                            ),
+                          ],
+                        ).then((total) {
+                          if (total is double && context.mounted) {
+                            showSnackBar(context,
+                                'This is a gift for you: total = \$0.0');
+                          }
+                        }),
+                      );
                     },
                   ),
                 _ => const Text('No preview selected'),
