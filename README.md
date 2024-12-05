@@ -9,7 +9,7 @@ Design system based on [Material 3](https://m3.material.io/).
 ### ⚛️ Atoms
 
 - Horizontal Spacer
-- Vetical Spacer
+- Vertical Spacer
 
 ### 💧 Molecules
 
